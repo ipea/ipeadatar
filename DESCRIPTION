@@ -1,30 +1,47 @@
 Package: ipeadatar
 Type: Package
 Title: API Wrapper for 'Ipeadata'
-Version: 0.1.6
-Authors@R: c(
-    person("Luiz Eduardo S.","Gomes", role=c("aut","cre"), email="gomes.leduardo@gmail.com"),
-    person("Jessyka A. P.","Goltara", role=c("ctb"), email="jessykagoltara@gmail.com")
+Version: 0.2.0
+Authors@R:
+    c(
+      person(
+        "Luiz Eduardo S.", "Gomes",
+        role = c("aut", "cre"),
+        email = "gomes.leduardo@gmail.com",
+        comment = c(ORCID = "0000-0001-8968-5947")
+      ),
+      person(
+        "Erivelton Pires", "Guedes",
+        role = "ctb",
+        comment = "Project coordination"
+      )
     )
-Author: Luiz Eduardo S. Gomes [aut, cre],
-        Jessyka A. P. Goltara [ctb]
-Maintainer: Luiz Eduardo S. Gomes <gomes.leduardo@gmail.com>
-Description: Allows direct access to the macroeconomic, 
-             financial and regional database maintained by 
-             Brazilian Institute for Applied Economic Research ('Ipea').
-             This R package uses the 'Ipeadata' API. For more information, 
-             see <http://www.ipeadata.gov.br/>.
+Description: Provides direct access to the macroeconomic, financial,
+    and regional database maintained by the Brazilian Institute for
+    Applied Economic Research (Ipea) via the Ipeadata API. For more
+    information, see <https://www.ipeadata.gov.br/>.
 Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
+Language: en-US
 URL: https://github.com/gomesleduardo/ipeadatar
 BugReports: https://github.com/gomesleduardo/ipeadatar/issues
-Imports: stringr, curl, rlang, jsonlite, magrittr, dplyr, lubridate, purrr, sjlabelled
-NeedsCompilation: no
-RoxygenNote: 7.1.2
-Suggests: 
+Imports:
+    curl,
+    rlang,
+    jsonlite,
+    magrittr,
+    dplyr,
+    lubridate,
+    purrr,
+    sjlabelled
+Suggests:
     rmarkdown,
     knitr,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    cli
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+LazyData: true
+RoxygenNote: 7.3.2
+NeedsCompilation: no

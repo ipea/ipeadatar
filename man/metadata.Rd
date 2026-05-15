@@ -2,43 +2,45 @@
 % Please edit documentation in R/ipeadata_pkg.R
 \name{metadata}
 \alias{metadata}
-\title{Returns a metadata about the requested series}
+\title{Metadata for a requested series}
 \usage{
 metadata(code, language = c("en", "br"), quiet = FALSE)
 }
 \arguments{
-\item{code}{A character vector with Ipeadata code.}
+\item{code}{A character vector of Ipeadata series codes.}
 
-\item{language}{String specifying the selected language. Language options are
+\item{language}{A string specifying the language. Available options are
 English (\code{"en"}, default) and Brazilian Portuguese (\code{"br"}).}
 
-\item{quiet}{Logical. If \code{FALSE} (default), a progress bar is shown.}
+\item{quiet}{Logical. If \code{FALSE} (default), a progress bar is displayed.}
 }
 \value{
-A data frame containing Ipeadata code, name, short comment, last update, theme name,
- source's name and full name, source's URL, frequency, unity, multiplier factor, status,
- subject code and the country or territorial code of requested series.
+A data frame containing the Ipeadata code, name, short comment,
+  last update, theme name, source name and full name, source URL,
+  frequency, unit, multiplier factor, status, subject code, and
+  country code of the requested series.
 }
 \description{
-Returns a list with metadata information about the requested series.
+Returns metadata information for the requested Ipeadata series.
 }
 \note{
-The original language of the available series' names and the comments were preserved.
-The Ipeadata codes may be required by \code{available_series()}.
+The original language of the series names and comments is preserved.
+  The Ipeadata codes may be obtained using \code{available_series()}.
 }
 \examples{
 \dontrun{
-# Metadata from
-# "PRECOS12_IPCA12": Extended National Consumer Price Index (IPCA), Brazil
+# Metadata for:
+# "PRECOS12_IPCA12": Brazil’s official consumer price inflation index (IPCA)
 meta <- metadata(code = "PRECOS12_IPCA12")
 }
 
 }
 \references{
-This R package uses the Ipeadata API.
-For more information go to \url{http://www.ipeadata.gov.br/}.
+This package uses the Ipeadata API.
+  For more information, see \url{https://www.ipeadata.gov.br/}.
 }
 \seealso{
-\code{\link{available_series}}, \code{\link{available_subjects}},
-\code{\link{available_territories}}
+\code{\link{available_series}},
+  \code{\link{available_subjects}},
+  \code{\link{available_territories}}
 }

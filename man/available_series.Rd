@@ -2,21 +2,21 @@
 % Please edit documentation in R/ipeadata_pkg.R
 \name{available_series}
 \alias{available_series}
-\title{List with available series}
+\title{Available series}
 \usage{
 available_series(language = c("en", "br"))
 }
 \arguments{
-\item{language}{String specifying the selected language. Language options are
+\item{language}{A string specifying the language. Available options are
 English (\code{"en"}, default) and Brazilian Portuguese (\code{"br"}).}
 }
 \value{
-A data frame containing Ipeadata code, name, theme, source,
-frequency, last update and activity status of available series.
+A data frame containing the Ipeadata code, name, theme, source,
+  frequency, last update, and activity status of available series.
 }
 \description{
-Returns a list with available series from Ipeadata API database.
+Returns a list of available series from the Ipeadata API.
 }
 \note{
-The original language of the available series' names were preserved.
+The original language of the available series names is preserved.
 }

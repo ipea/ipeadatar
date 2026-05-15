@@ -2,17 +2,17 @@
 % Please edit documentation in R/ipeadata_pkg.R
 \name{available_subjects}
 \alias{available_subjects}
-\title{List with available subjects}
+\title{Available subjects}
 \usage{
 available_subjects(language = c("en", "br"))
 }
 \arguments{
-\item{language}{String specifying the selected language. Language options are
+\item{language}{A string specifying the language. Available options are
 English (\code{"en"}, default) and Brazilian Portuguese (\code{"br"}).}
 }
 \value{
-A data frame containing code and name of available subjects.
+A data frame containing the code and name of available subjects.
 }
 \description{
-Returns a list with available subjects from Ipeadata API database.
+Returns a list of available subjects from the Ipeadata API.
 }

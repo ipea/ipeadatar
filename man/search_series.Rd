@@ -2,29 +2,31 @@
 % Please edit documentation in R/ipeadata_pkg.R
 \name{search_series}
 \alias{search_series}
-\title{List with searched series}
+\title{Searched series}
 \usage{
-search_series(terms = NULL, fields = c('name'), language = c("en", "br"))
+search_series(terms = NULL, language = c("en", "br"))
 }
 \arguments{
-\item{terms}{A character vector with search terms.}
+\item{terms}{A character vector of search terms.}
 
-\item{fields}{A character vector with table fields where matches are sought. See 'Details'.}
-
-\item{language}{String specifying the selected language. Language options are
+\item{language}{A string specifying the language. Available options are
 English (\code{"en"}, default) and Brazilian Portuguese (\code{"br"}).}
 }
 \value{
-A data frame containing Ipeadata code, name, theme, source,
-frequency, last update and activity status of searched series.
+A data frame containing the Ipeadata code, name, theme, source,
+  frequency, last update, and activity status of the matched series.
 }
 \description{
-Returns a list with searched series by terms from Ipeadata API database.
-}
-\details{
-The \code{fields} options are \code{"code"}, \code{"name"}, \code{"theme"}, 
-\code{"source"}, \code{"freq"}, \code{"lastupdate"} and \code{"status"}.
+Returns a list of series matching the specified search terms
+  from the Ipeadata API.
 }
 \note{
-The original language of the available series' names were preserved.
+The original language of the series names is preserved.
+}
+\examples{
+\dontrun{
+# Search for "rural"
+search <- search_series(terms = "rural", language = "en")
+}
+
 }

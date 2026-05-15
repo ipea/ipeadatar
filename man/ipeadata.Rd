@@ -2,40 +2,41 @@
 % Please edit documentation in R/ipeadata_pkg.R
 \name{ipeadata}
 \alias{ipeadata}
-\title{Returns a database about the requested series}
+\title{Data for a requested series}
 \usage{
 ipeadata(code, language = c("en", "br"), quiet = FALSE)
 }
 \arguments{
-\item{code}{A character vector with Ipeadata code.}
+\item{code}{A character vector of Ipeadata series codes.}
 
-\item{language}{String specifying the selected language. Language options are
+\item{language}{A string specifying the language. Available options are
 English (\code{"en"}, default) and Brazilian Portuguese (\code{"br"}).}
 
-\item{quiet}{Logical. If \code{FALSE} (default), a progress bar is shown.}
+\item{quiet}{Logical. If \code{FALSE} (default), a progress bar is displayed.}
 }
 \value{
-A data frame containing Ipeadata code, date, value, territorial unit name
-and country or territorial code of requested series.
+A data frame containing the Ipeadata code, date, value,
+  territorial unit name, and territorial code of the requested series.
 }
 \description{
-Returns a list with available database about the requested series.
+Returns the data associated with the requested Ipeadata series.
 }
 \note{
-The Ipeadata codes may be required by \code{available_series()}.
+The Ipeadata codes may be obtained using \code{available_series()}.
 }
 \examples{
 \dontrun{
-# Data from
-# "PAN_RRPE": Average real income from effective main work, Brazil
-data <- ipeadata(code = "PAN_RRPE", language = "br")
+# Data for:
+# "PRECOS12_IPCA12": Brazil’s official consumer price inflation index (IPCA)
+data <- ipeadata(code = "PRECOS12_IPCA12", language = "en")
 }
 
 }
 \references{
-This R package uses the Ipeadata API.
-For more information go to \url{http://www.ipeadata.gov.br/}.
+This package uses the Ipeadata API.
+  For more information, see \url{https://www.ipeadata.gov.br/}.
 }
 \seealso{
-\code{\link{available_series}}, \code{\link{available_territories}}
+\code{\link{available_series}},
+  \code{\link{available_territories}}
 }
